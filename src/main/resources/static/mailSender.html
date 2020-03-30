@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btnSend").click(function(){		
+		$.ajax("mail2.do",{success:function(r){	
+			alert("ok");
+		}});
+	});		
+});
+</script>
+</head>
+<body>
+	<button id="btnSend">메일보내기</button>
+</body>
+</html>

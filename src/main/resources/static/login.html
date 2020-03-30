@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btnLogin").click(function(){
+		var member = $("#f").serialize();
+		$.ajax("login.do",{data:member,success:function(r){
+			alert(r);
+		}});
+	});
+});
+</script>
+</head>
+<body>
+	<h2>회원등록</h2>
+	<hr>
+	<form id="f">
+		<table>
+			<tr>
+				<td>회원아이디 :</td>
+				<td><input type="text" id="id" name="id"></td>				
+			</tr>			
+			<tr>
+				<td>회원이름 :</td>
+				<td><input type="text" id="name" name="name"></td>			
+			</tr>
+			<tr>
+				<td>전화번호 :</td>
+				<td><input type="text" id="tel" name="tel"></td>			
+			</tr>
+			<tr>
+				<td>회원나이 :</td>
+				<td><input type="number" id="age" name="age"></td>				
+			</tr>				
+			<tr>
+				<td>회원비밀번호 :</td>
+				<td><input type="password" id="pwd" name="pwd"></td>			
+			</tr>
+			<tr>
+				<td>회원e-mail :</td>
+				<td><input type="test" id="email" name="email"></td>			
+			</tr>		
+		</table>
+	</form>
+	<button id="btnLogin">회원등록</button>
+</body>
+</html>
