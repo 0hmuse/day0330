@@ -48,11 +48,18 @@ public class MemberController {
 				String str = "<h2>회원가입을 완료하시겠습니까?</h2><hr>";
 				str += "<button>확인</button><button>취소</button>";
 				
-				msg.setText(str, true);				
+				msg.setText(str, true);
+				
+//				if(re == 1) {
+//					dao.insert(m);
+//				}else if(re == 0) {
+//					
+//				}
 			}
 		});		
-		System.out.println("메일보내기완료");
 		dao.insert(m);
+		System.out.println("메일보내기완료");
+		
 		return str;
 	}		
 }
